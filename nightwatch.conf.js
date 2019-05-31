@@ -32,7 +32,7 @@ const config = {
   "test_settings": {
     "default": {
         "launch_url": 'https://ahab.inlottodev.com/',
-        "selenium_port": 4447,
+        "selenium_port": 4444,
         "selenium_host": "localhost",
         "silent": true,
         "globals": {
