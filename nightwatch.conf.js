@@ -18,7 +18,7 @@ const config = {
     "server_path": seleniumServer.path,
     "log_path": "",
     "host": "127.0.0.1",
-    "port": 4445,
+    "port": 9515,
     "cli_args": {
       "webdriver.chrome.driver": chromedriver.path,
       "webdriver.firefox.driver": firefoxdriver.path
@@ -32,9 +32,9 @@ const config = {
   "test_settings": {
     "default": {
         "launch_url": 'https://ahab.inlottodev.com/',
-        "selenium_port": 4445,
+        "selenium_port": 9515,
         "selenium_host": "localhost",
-        "default_path_prefix": "/wd/hub",
+        "default_path_prefix": "",
         "silent": true,
         "globals": {
           "waitForConditionTimeout": 10000,
