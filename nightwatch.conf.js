@@ -1,9 +1,6 @@
 const PKG = require('./package.json');
 const GLOBALS = './globals.js';
 const url = require('./env/url.js');
-const seleniumServer = require('selenium-server');
-const chromedriver = require('chromedriver');
-const firefoxdriver = require('geckodriver');
 
 const config = {
   "src_folders": ["test"],
@@ -20,8 +17,8 @@ const config = {
     "host": "127.0.0.1",
     "port": 4444,
     "cli_args": {
-      "webdriver.chrome.driver": chromedriver.path,
-      "webdriver.firefox.driver": firefoxdriver.path
+      "webdriver.chrome.driver": "./bin/chromedriver",
+      "webdriver.firefox.driver": "./bin/geckodriver"
     }
   },
   "live_output": true,
@@ -34,7 +31,6 @@ const config = {
         "launch_url": 'https://ahab.inlottodev.com/',
         "selenium_port": 4444,
         "selenium_host": "localhost",
-        "default_path_prefix": "",
         "silent": true,
         "globals": {
           "waitForConditionTimeout": 10000,
@@ -43,13 +39,6 @@ const config = {
         },
         "desiredCapabilities" : {
             "browserName" : "chrome",
-            "chromeOptions": {
-              "args": [
-                  "disable-web-security",
-                  "use-fake-device-for-media-stream",
-                  "use-fake-ui-for-media-stream"
-              ]
-            },
             "javascriptEnabled" : true,
             "acceptSslCerts" : true,
           }
