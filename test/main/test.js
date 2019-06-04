@@ -28,7 +28,7 @@ module.exports = {
                 .getText('.snotifyToast-game',res => {
                     browser.assert.equal(res.value, title,`${title}投注成功`)
                 })
-            browser.pause(2000).end()
+            browser.end()
 
     }
 

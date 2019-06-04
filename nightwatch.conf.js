@@ -18,7 +18,7 @@ const config = {
     "server_path": seleniumServer.path,
     "log_path": "",
     "host": "127.0.0.1",
-    "port": 4447,
+    "port": 4445,
     "cli_args": {
       "webdriver.chrome.driver": chromedriver.path,
       "webdriver.firefox.driver": firefoxdriver.path
@@ -32,8 +32,9 @@ const config = {
   "test_settings": {
     "default": {
         "launch_url": 'https://ahab.inlottodev.com/',
-        "selenium_port": 4447,
+        "selenium_port": 4445,
         "selenium_host": "localhost",
+        "default_path_prefix": "/wd/hub",
         "silent": true,
         "globals": {
           "waitForConditionTimeout": 10000,
@@ -42,6 +43,13 @@ const config = {
         },
         "desiredCapabilities" : {
             "browserName" : "chrome",
+            "chromeOptions": {
+              "args": [
+                  "disable-web-security",
+                  "use-fake-device-for-media-stream",
+                  "use-fake-ui-for-media-stream"
+              ]
+            },
             "javascriptEnabled" : true,
             "acceptSslCerts" : true,
           }
