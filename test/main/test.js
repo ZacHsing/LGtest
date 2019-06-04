@@ -24,7 +24,7 @@ module.exports = {
                 .verify.attributeEquals('@randomPick', 'class', 'btn btn--border btn-auto', '投注功能ok')
                 .click('@randomPick')
                 .click('@orderBtn')
-                .waitForElementPresent('.snotifyToast-title','確認彈出視窗')
+                .waitForElementPresent('@popup','確認彈出視窗')
                 .getText('.snotifyToast-game',res => {
                     browser.assert.equal(res.value, title,`${title}投注成功`)
                 })

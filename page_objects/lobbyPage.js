@@ -17,6 +17,9 @@ module.exports = {
         orderBtn:{
             selector:'.btn--mainRed.btn-betTool-bet'
         },
+        popup:{
+            selector:'.snotifyToast-title'
+        }
 
         
     },
