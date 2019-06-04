@@ -15,10 +15,10 @@ const config = {
   "globals_path": GLOBALS,
   "selenium": {
     "start_process": true,
-    "server_path": seleniumServer.path,
+    "server_path": "./bin/selenium-server-standalone-4.0.0-alpha-1.jar",
     "log_path": "",
     "host": "127.0.0.1",
-    "port": 9515,
+    "port": 4444,
     "cli_args": {
       "webdriver.chrome.driver": chromedriver.path,
       "webdriver.firefox.driver": firefoxdriver.path
@@ -32,7 +32,7 @@ const config = {
   "test_settings": {
     "default": {
         "launch_url": 'https://ahab.inlottodev.com/',
-        "selenium_port": 9515,
+        "selenium_port": 4444,
         "selenium_host": "localhost",
         "default_path_prefix": "",
         "silent": true,
