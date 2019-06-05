@@ -17,7 +17,7 @@ module.exports = {
         orderBtn:{
             selector:'.btn--mainRed.btn-betTool-bet'
         },
-        // timer:'#app > div.lobby > div.mainArea > div.mainArea-content > div > div.panel > div.gameInfo > div.gameInfo-current > div.gameInfo-time',
+        timer:'#app > div.lobby > div.mainArea > div.mainArea-content > div > div.panel > div.gameInfo > div.gameInfo-current > div.gameInfo-time',
         
         
     },

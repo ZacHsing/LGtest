@@ -13,9 +13,8 @@ module.exports = {
        const lobby =  browser.page.lobbyPage()
        let title = ''
             lobby
-                .selectSubMenu(3)
+                .selectSubMenu(4)    
                 .waitForElementNotPresent('.panel is-closed',10000)
-                
                 .waitForElementPresent('@gameTitle','取得遊戲標題')
                 .getText('@gameTitle',res => {
                     title = res.value
@@ -28,7 +27,7 @@ module.exports = {
                 .getText('.snotifyToast-game',res => {
                     browser.assert.equal(res.value, title,`${title}投注成功`)
                 })
-                
+ 
             browser.end()
 
     }
