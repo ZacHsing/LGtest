@@ -1,6 +1,9 @@
 const PKG = require('./package.json');
 const GLOBALS = './globals.js';
 const url = require('./env/url.js');
+// const seleniumServer = require('selenium-server');
+// const chromedriver = require('chromedriver');
+const firefoxdriver = require('geckodriver');
 
 const config = {
   "src_folders": ["test"],
@@ -18,7 +21,7 @@ const config = {
     "port": 4444,
     "cli_args": {
       "webdriver.chrome.driver": "./bin/chromedriver",
-      "webdriver.firefox.driver": "./bin/geckodriver"
+      "webdriver.firefox.driver": firefoxdriver.path
     }
   },
   "live_output": true,
